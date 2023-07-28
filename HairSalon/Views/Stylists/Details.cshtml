@@ -11,7 +11,7 @@
 <h3>@Html.DisplayNameFor(model => model.Speciality): @Html.DisplayFor(model => model.Speciality)<h3>
 <h3>@Html.DisplayNameFor(model => model.HireDate): @Html.DisplayFor(model => model.HireDate)<h3>
 
-    @if (@Model.Client.Count == 0)
+    @if (@Model.Clients.Count == 0)
     {
       <h3>This stylist has no clients yet</h3>
     }
