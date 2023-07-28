@@ -10,14 +10,11 @@
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name)
   
-  @* @Html.LabelFor(model => model.Specialty)
-  @Html.DropDownListFor(model => model.Specialty, GetSpecialtySelectList()) *@
-
+  @Html.LabelFor(model => model.Speciality)
+  @Html.TextBoxFor(model => model.Speciality)
   
   @Html.LabelFor(model => model.HireDate)
   @Html.TextBoxFor(model => model.HireDate)
-  
-  
   
   <input type="submit" value="Add new stylist" />
 }
