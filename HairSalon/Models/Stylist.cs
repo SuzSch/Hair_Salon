@@ -6,5 +6,6 @@ public class Stylist
 
     public string Name { get; set; }
     public string Speciality { get; set; }
+    public int HireDate { get; set; }
     public string DayOff { get; set; }
 }

@@ -7,7 +7,7 @@ namespace HairSalon.Controllers
 {
   public class ClientsController : Controller
   {
-    private readonly HairsalonContext _db;
+    private readonly HairSalonContext _db;
 
     public ClientsController(HairSalonContext db)
     {
