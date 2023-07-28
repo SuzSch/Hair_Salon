@@ -1,19 +1,29 @@
 
-public class StylistController : Controller
-{
-  // ... other action methods ...
+using Microsoft.AspNetCore.Mvc;
+using HairSalon.Models;
+using System.Collections.Generic;
+using System.Linq;
 
-  private IEnumerable<SelectListItem> GetSpecialtySelectList()
+namespace HairSalon.Controllers
+{
+  public class StylistController : Controller
   {
-    return new List<SelectListItem>
-        {
-            new SelectListItem { Value = "ShortHair", Text = "Short Hair" },
-            new SelectListItem { Value = "LongHair", Text = "Long Hair" },
-            new SelectListItem { Value = "CurlyHair", Text = "Curly Hair" },
-            new SelectListItem { Value = "Colorist", Text = "Colorist" }
-        };
+    private readonly HairSalonContext _db;
+
+    public StylistController(HairSalonContext db)
+    {
+      _db = db;
+    }
+
+    public ActionResult Index()
+    {
+      List<Stylist> model = _db.StylistId.ToList();
+      return View(model);
+    }
   }
 }
+
+
 
 
 
