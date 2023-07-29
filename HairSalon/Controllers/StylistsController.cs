@@ -3,14 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace HairSalon.Controllers
 {
-  public class StylistController : Controller
+  public class StylistsController : Controller
   {
     private readonly HairSalonContext _db;
 
-    public StylistController(HairSalonContext db)
+    public StylistsController(HairSalonContext db)
     {
       _db = db;
     }
@@ -22,6 +23,16 @@ namespace HairSalon.Controllers
     }
     public ActionResult Create()
     {
+      List<SelectListItem> specialities = new List<SelectListItem>
+    {
+        new SelectListItem { Value = "Short Hair", Text = "Short Hair" },
+        new SelectListItem { Value = "Long Hair", Text = "Long Hair" },
+        new SelectListItem { Value = "Curly Hair", Text = "Curly Hair" },
+        new SelectListItem { Value = "Colorist", Text = "Colorist" }
+    };
+
+      ViewBag.SpecialityList = specialities;
+
       return View();
     }
 

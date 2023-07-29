@@ -11,11 +11,11 @@
   @Html.TextBoxFor(model => model.Name)
   
   @Html.LabelFor(model => model.Speciality)
-  @Html.TextBoxFor(model => model.Speciality)
-  
+@Html.DropDownListFor(model => model.Speciality, new SelectList(ViewBag.SpecialityList, "Value", "Text"), "Select Speciality")
+
   @Html.LabelFor(model => model.HireDate)
-  @Html.TextBoxFor(model => model.HireDate)
-  
+  @Html.TextBoxFor(model => model.HireDate, "{0:MM/dd/yy}", new { placeholder = "MM/dd/yy" })
+
   <input type="submit" value="Add new stylist" />
 }
 <p>@Html.ActionLink("Show all stylist", "Index")</p>
