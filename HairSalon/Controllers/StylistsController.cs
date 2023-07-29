@@ -51,6 +51,32 @@ namespace HairSalon.Controllers
           .FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
     }
+
+    public ActionResult Edit(int id)
+    {
+      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+
+      List<SelectListItem> specialities = new List<SelectListItem>
+    {
+        new SelectListItem { Value = "Short Hair", Text = "Short Hair" },
+        new SelectListItem { Value = "Long Hair", Text = "Long Hair" },
+        new SelectListItem { Value = "Curly Hair", Text = "Curly Hair" },
+        new SelectListItem { Value = "Colorist", Text = "Colorist" }
+    };
+      ViewBag.SpecialityList = specialities;
+
+      return View(thisStylist);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Stylist stylist)
+    {
+      _db.Stylists.Update(stylist);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+
     public ActionResult Delete(int id)
     {
       Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
