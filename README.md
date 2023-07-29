@@ -1,5 +1,5 @@
+![Picture of the back of a person with long lavendar hair in front of a pink background. Three hands surround the persons head holding various tools you would find in a salon.](https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/s93-td-2709_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=07db618226b2888df19035246bfaf8bf)
 # Eau Claire's Salon
-
 #### An MVC web application to help Claire of Eau Claire's Salon manage her employees (stylists) and their clients.
 #### By Suzanne Schuber
 
@@ -23,7 +23,11 @@
 ## Setup/Installation Requirements
 
 1. Clone this repo.
-2. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's root directory called "HairSalon.Solutions".
+2. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's root directory called "HairSalon.Solutions"
+3.Add the following dependencies.
+   dotnet add package Microsoft.EntityFrameworkCore -v 6.0.0
+   dotnet add package Pomelo.EntityFrameworkCore.MySql -v 6.0.0
+4.
 
 
 
