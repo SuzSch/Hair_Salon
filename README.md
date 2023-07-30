@@ -30,14 +30,14 @@
 4. Add a .gitignore file to root directory.
 5. add obj, bin, and appsettings.json to .gitignore file.
 6. Within the production directory "HairSalon", create a new file called appsettings.json.
-7. Within appsettings.json, put in the following code, replacing the database, uid and pwd values with your own database name, username and password for MySQL.
-<br> 
+7. Within appsettings.json, put in the following code, replacing the database, uid and pwd values with your own database name, username and password for MySQL:
+
 {
   "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Port=3306;database=[YOUR-DB-NAME];uid=[YOUR-USER-HERE];pwd=[YOUR-PASSWORD-HERE];"
   }
 }
-<br>
+
 8. Within the production directory "HairSalon", run dotnet watch run in the command line to start the project in development mode with a watcher.
 
 ## Known Bugs
