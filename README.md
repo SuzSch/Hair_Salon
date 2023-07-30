@@ -24,7 +24,7 @@
 
 1. Clone this repo.
 2. Open your terminal (e.g., Terminal or GitBash) and navigate to this project's root directory called "HairSalon.Solutions"
-3.Add the following dependencies.
+3. Add the following dependencies.
    * dotnet add package Microsoft.EntityFrameworkCore -v 6.0.0
    * dotnet add package Pomelo.EntityFrameworkCore.MySql -v 6.0.0
 4. Add a .gitignore file to root directory.
