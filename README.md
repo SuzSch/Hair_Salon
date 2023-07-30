@@ -37,7 +37,8 @@
     "DefaultConnection": "Server=localhost;Port=3306;database=[YOUR-DB-NAME];uid=[YOUR-USER-HERE];pwd=[YOUR-PASSWORD-HERE];"
   }
 }
-7. Within the production directory "HairSalon", run dotnet watch run in the command line to start the project in development mode with a watcher.
+<br>
+8. Within the production directory "HairSalon", run dotnet watch run in the command line to start the project in development mode with a watcher.
 
 ## Known Bugs
 No known bugs
