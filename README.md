@@ -31,13 +31,19 @@
 5. add obj, bin, and appsettings.json to .gitignore file.
 6. Within the production directory "HairSalon", create a new file called appsettings.json.
 7. Within appsettings.json, put in the following code, replacing the database, uid and pwd values with your own database name, username and password for MySQL:
-
+``````
 {
   "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Port=3306;database=[YOUR-DB-NAME];uid=[YOUR-USER-HERE];pwd=[YOUR-PASSWORD-HERE];"
   }
 }
-
+``````
+8. Open MySQL and In the Navigator > Administration window, select Data Import/Restore.
+9. In Import Options select Import from Self-Contained File.
+10. Navigate to the cloned repo.
+11. Choose the suzanne_schuber_dump.sql file and click open.
+12. Select Dump Structure Only and then navigate to the tab called Import Progress and click Start Import at the bottom right corner of the window.
+13. After you are finished with the above steps, reopen the Navigator > Schemas tab. Right click and select Refresh All. 
 8. Within the production directory "HairSalon", run dotnet watch run in the command line to start the project in development mode with a watcher.
 
 ## Known Bugs
